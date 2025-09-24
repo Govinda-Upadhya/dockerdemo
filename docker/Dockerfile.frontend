@@ -13,9 +13,11 @@ COPY ./apps/web ./apps/web
 COPY ./package.json ./package.json
 COPY ./turbo.json ./turbo.json
 
-RUN bun install 
-RUN cd packages/db && bunx prisma generate && cd ../..
-RUN bun run build   
+RUN bun install && \
+    cd packages/db && \
+    bunx prisma generate && \
+    cd ../.. && \
+    bun run build
 
 EXPOSE 3001
 
