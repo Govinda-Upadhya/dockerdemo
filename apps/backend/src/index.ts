@@ -37,7 +37,7 @@ app.post("/createTodo", async (req, res) => {
 
 app.get("/getUsers", async (req, res) => {
   const users = await prismaClient.user.findMany({});
-  return res.status(200).json({ users });
+  return res.status(200).json({ users: "users" });
 });
 
 app.post("/createusers", async (req, res) => {
