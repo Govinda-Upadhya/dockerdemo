@@ -6,6 +6,7 @@
     "dev": "turbo run dev",
     "start:web": "cd apps/web && bun run start",
     "start:ws": "cd apps/ws && bun run dev",
+    "start:backend": "cd apps/backend && bun run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
