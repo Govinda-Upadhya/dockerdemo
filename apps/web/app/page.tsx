@@ -11,7 +11,7 @@ export default async function Home() {
   return (
     <div className={styles.page}>
       {" "}
-      welcome users {users.map((user) => user.username)}
+      done welcome users {users.map((user) => user.username)}
     </div>
   );
 }
