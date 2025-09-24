@@ -15,7 +15,7 @@ COPY ./turbo.json ./turbo.json
 
 RUN bun install 
 RUN cd packages/db && bunx prisma generate && cd ../..
-RUN DATABASE_URL=${DATABASE_URL} bun run build
+RUN bun run build   
 
 EXPOSE 3001
 
